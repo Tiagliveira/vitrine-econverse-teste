@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Tiagliveira/vitrine-econverse-teste.git/static/css/main.43959de5.css",
+    "main.js": "/Tiagliveira/vitrine-econverse-teste.git/static/js/main.b0090530.js",
+    "static/media/banner.jpg": "/Tiagliveira/vitrine-econverse-teste.git/static/media/banner.275930de4b036662a2ef.jpg",
+    "static/media/Mask Group.png": "/Tiagliveira/vitrine-econverse-teste.git/static/media/Mask Group.6b15f698c693be2abf0d.png",
+    "static/media/compre por categoria.png": "/Tiagliveira/vitrine-econverse-teste.git/static/media/compre por categoria.ff416dd2b7c3c2dd4777.png",
+    "index.html": "/Tiagliveira/vitrine-econverse-teste.git/index.html",
+    "main.43959de5.css.map": "/Tiagliveira/vitrine-econverse-teste.git/static/css/main.43959de5.css.map",
+    "main.b0090530.js.map": "/Tiagliveira/vitrine-econverse-teste.git/static/js/main.b0090530.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43959de5.css",
+    "static/js/main.b0090530.js"
+  ]
+}
