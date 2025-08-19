@@ -1,0 +1,62 @@
+.header {
+    width: 1280px;
+    margin: auto;
+    .frame {
+        width: 764px;
+        height: 20px;
+        margin: 6px 20%;
+    }
+
+    .header-top {
+        width: 1280px;
+        height: 144px;
+        border: 1px solid rgba(240, 240, 240, 1);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        .group {
+            width: 138px;
+            height: 41.3px;
+            top: 47px;
+            color: Roxo;
+            margin:auto;
+        }
+        .icon {
+            width: 216px;
+            height: 32px;
+            left: 1064px;
+            margin: auto;
+        }
+    }
+
+    .nav {
+        width: 1141px;
+        height: 20px;
+        top: 114px;
+        left: 69px;
+        gap: 91px;
+        list-style: none;
+        display: flex;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        margin:2px auto;
+
+
+        li a {
+            text-decoration: none;
+            color: rgba(159, 159, 159, 1);
+        }
+        a:hover {
+            color: rgba(48, 25, 178, 1);
+        }
+
+        &:active {
+            color: rgba(48, 25, 178, 1);
+        }
+        #ativo{
+            color:rgba(48, 25, 178, 1);
+        }
+    }
+}

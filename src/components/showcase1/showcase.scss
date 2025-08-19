@@ -1,0 +1,41 @@
+.Container-carousel {
+  width: 100%;
+  margin: 50px auto;
+  
+}
+
+.carousel-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px; // reduza o espaçamento entre colunas
+  max-width: 1400px; // limite a largura total
+  margin: 0 auto; //
+}
+
+.products-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-button:hover:not(:disabled) {
+  transform: scale(1.1);
+}
