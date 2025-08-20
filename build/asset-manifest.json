@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.0807f90a.css",
-    "main.js": "/static/js/main.94b842f5.js",
+    "main.js": "/static/js/main.aefcea30.js",
     "static/media/banner.jpg": "/static/media/banner.275930de4b036662a2ef.jpg",
     "static/media/Mask Group.png": "/static/media/Mask Group.6b15f698c693be2abf0d.png",
     "static/media/compre por categoria.png": "/static/media/compre por categoria.ff416dd2b7c3c2dd4777.png",
     "index.html": "/index.html",
     "main.0807f90a.css.map": "/static/css/main.0807f90a.css.map",
-    "main.94b842f5.js.map": "/static/js/main.94b842f5.js.map"
+    "main.aefcea30.js.map": "/static/js/main.aefcea30.js.map"
   },
   "entrypoints": [
     "static/css/main.0807f90a.css",
-    "static/js/main.94b842f5.js"
+    "static/js/main.aefcea30.js"
   ]
 }

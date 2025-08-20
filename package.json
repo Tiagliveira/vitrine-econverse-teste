@@ -1,6 +1,6 @@
 {
   "name": "econverse-vitrine",
-   "proxy": "https://app.econverse.com.br",
+  "proxy": "https://app.econverse.com.br",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -11,8 +11,8 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.90.0"
   },

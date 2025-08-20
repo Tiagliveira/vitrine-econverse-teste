@@ -14,6 +14,8 @@ interface Props {
 export const ProductsCarousel: React.FC<Props> = ({ products }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [selecProduct, setSelectProduct] = useState<Product | null>(null);
+const [modalPosition, setModalPosition] = useState({ top: window.innerHeight / 2, left: window.innerWidth / 2 });
+
   const itemsByPage = 4;
 
   const handlePrev = () => {
@@ -26,10 +28,20 @@ export const ProductsCarousel: React.FC<Props> = ({ products }) => {
     );
   };
 
-  const visibleProducts = products.slice(startIndex, startIndex + itemsByPage);
+const visibleProducts = products?.length
+  ? products.slice(startIndex, startIndex + itemsByPage)
+  : [];
+
 
   return (
     <div className="Container-carousel">
+       {selecProduct && (
+        <ProductModal
+          product={selecProduct}
+           position={modalPosition}
+          onClose={() => setSelectProduct(null)}
+        />
+      )}
       <div className="carousel-wrapper">
         <button
           className="nav-button left"
@@ -40,30 +52,39 @@ export const ProductsCarousel: React.FC<Props> = ({ products }) => {
         </button>
 
         <div className="products-grid">
-          {visibleProducts.map((product) => (
-            <ProductCard
-              key={product.productName}
-              product={product}
-              onClick={() => setSelectProduct(product)}
-            />
-          ))}
-        </div>
+  {visibleProducts.length > 0 ? (
+    visibleProducts.map((product) => (
+      <ProductCard
+  key={product.productName}
+  product={product}
+  onClick={(e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setModalPosition({
+      top: rect.top + window.scrollY,
+      left: rect.left + window.scrollX,
+    });
+    setSelectProduct(product);
+  }}
+/>
+
+
+    ))
+  ) : (
+    <p>Carregando produtos...</p>
+    
+  )}
+</div>
 
         <button
           className="nav-button right"
           onClick={handlenext}
-          disabled={startIndex + itemsByPage >= products.length}
+        disabled={!products?.length || startIndex + itemsByPage >= products.length}
         >
           <img src={ArrowLeft} alt="Próximo" />
         </button>
       </div>
 
-      {selecProduct && (
-        <ProductModal
-          product={selecProduct}
-          onClose={() => setSelectProduct(null)}
-        />
-      )}
+     
     </div>
   );
 };

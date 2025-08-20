@@ -3,7 +3,7 @@ import "./productCard.scss"
 
 interface ProductCardProps {
     product: Product;
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 const ProductCard = ({ product, onClick }: ProductCardProps) => {
