@@ -1,69 +1,138 @@
-# React + TypeScript + Vite
+# 🛍️ Vitrine Econverse — Projeto de Avaliação Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como parte de um desafio técnico para uma vaga de desenvolvedor front-end na Econverse. A proposta consiste em construir uma vitrine de produtos com layout responsivo, navegação por carrossel e exibição de detalhes em modal.
 
-Currently, two official plugins are available:
+🔗 **Deploy online:** [vitrine-econverse-teste.vercel.app](https://vitrine-econverse-teste.vercel.app/)  
+📁 **Repositório:** [github.com/Tiagliveira/vitrine-econverse-teste](https://github.com/Tiagliveira/vitrine-econverse-teste)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📦 Tecnologias utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** com TypeScript
+- **Vite** para bundling e desenvolvimento rápido
+- **SCSS** para estilização modular
+- **ReactDOM.createPortal** para modais flutuantes
+- **Vercel** para deploy contínuo
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🧠 Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Listagem de produtos em carrossel com navegação lateral
+- Modal flutuante com detalhes do produto
+- Responsividade para diferentes tamanhos de tela
+- Animações suaves e UX refinada
+- Separação de componentes reutilizáveis (`ProductCard`, `ProductModal`, `ProductsCarousel`)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Sobre o JSON e o CORS
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Durante o desenvolvimento, o projeto deveria consumir um arquivo JSON hospedado externamente. No entanto, o servidor de origem não estava configurado para permitir requisições cross-origin (CORS), o que impedia o fetch direto via navegador.
+
+🔧 **Solução adotada:**  
+Para contornar essa limitação, o arquivo JSON foi importado diretamente no projeto como um arquivo local. Isso garante que os dados estejam disponíveis sem depender de requisições externas, mantendo a integridade da avaliação técnica.
+
+```ts
+import products from '../data/products.json';
+
+🚀 Como rodar localmente
+# Instalar dependências
+yarn install
+
+# Rodar em modo de desenvolvimento
+yarn dev
+
+# Gerar build de produção
+yarn build
+
+# Visualizar build localmente
+yarn pre
+
+Perfeito, Tiago! Aqui está o trecho atualizado do README com seu LinkedIn certinho:
+## 👨‍💻 Autor
+
+**Tiago Oliveira**  
+[LinkedIn](https://www.linkedin.com/in/tiagoliveira-) • [GitHub](https://github.com/Tiagliveira)
+
+
+E aqui está o README completo, pronto pra você copiar e colar no seu repositório como README.md:
+
+# 🛍️ Vitrine Econverse — Projeto de Avaliação Front-End
+
+Este projeto foi desenvolvido como parte de um desafio técnico para uma vaga de desenvolvedor front-end na Econverse. A proposta consiste em construir uma vitrine de produtos com layout responsivo, navegação por carrossel e exibição de detalhes em modal.
+
+🔗 **Deploy online:** [vitrine-econverse-teste.vercel.app](https://vitrine-econverse-teste.vercel.app/)  
+📁 **Repositório:** [github.com/Tiagliveira/vitrine-econverse-teste](https://github.com/Tiagliveira/vitrine-econverse-teste)
+
+---
+
+## 📦 Tecnologias utilizadas
+
+- **React** com TypeScript
+- **Vite** para bundling e desenvolvimento rápido
+- **SCSS** para estilização modular
+- **ReactDOM.createPortal** para modais flutuantes
+- **Vercel** para deploy contínuo
+
+---
+
+## 🧠 Funcionalidades
+
+- Listagem de produtos em carrossel com navegação lateral
+- Modal flutuante com detalhes do produto
+- Responsividade para diferentes tamanhos de tela
+- Animações suaves e UX refinada
+- Separação de componentes reutilizáveis (`ProductCard`, `ProductModal`, `ProductsCarousel`)
+
+---
+
+## ⚙️ Sobre o JSON e o CORS
+
+Durante o desenvolvimento, o projeto deveria consumir um arquivo JSON hospedado externamente. No entanto, o servidor de origem não estava configurado para permitir requisições cross-origin (CORS), o que impedia o fetch direto via navegador.
+
+🔧 **Solução adotada:**  
+Para contornar essa limitação, o arquivo JSON foi importado diretamente no projeto como um arquivo local. Isso garante que os dados estejam disponíveis sem depender de requisições externas, mantendo a integridade da avaliação técnica.
+
+```ts
+import products from '../data/products.json';
+
+
+Essa abordagem foi necessária exclusivamente por conta da política de CORS do servidor original e não representa uma limitação técnica do projeto.
+
+
+🚀 Como rodar localmente
+# Instalar dependências
+yarn install
+
+# Rodar em modo de desenvolvimento
+yarn dev
+
+# Gerar build de produção
+yarn build
+
+# Visualizar build localmente
+yarn preview
+
+
+
+📂 Estrutura de pastas
+src/
+├── components/
+│   ├── ProductCard/
+│   ├── ProductModal/
+│   └── ProductsCarousel/
+├── data/
+│   └── products.json
+├── types/
+│   └── product.ts
+├── styles/
+│   └── showcase.scss
+└── main.tsx
+
+
+
+👨‍💻 Autor
+Tiago Oliveira
+LinkedIn • GitHub
