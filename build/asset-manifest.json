@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/vitrine-econverse-teste/static/css/main.7a9f4fcb.css",
+    "main.js": "/vitrine-econverse-teste/static/js/main.9f66feaf.js",
+    "static/media/banner.jpg": "/vitrine-econverse-teste/static/media/banner.275930de4b036662a2ef.jpg",
+    "static/media/Mask Group.png": "/vitrine-econverse-teste/static/media/Mask Group.6b15f698c693be2abf0d.png",
+    "static/media/compre por categoria.png": "/vitrine-econverse-teste/static/media/compre por categoria.ff416dd2b7c3c2dd4777.png",
+    "index.html": "/vitrine-econverse-teste/index.html",
+    "main.7a9f4fcb.css.map": "/vitrine-econverse-teste/static/css/main.7a9f4fcb.css.map",
+    "main.9f66feaf.js.map": "/vitrine-econverse-teste/static/js/main.9f66feaf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a9f4fcb.css",
+    "static/js/main.9f66feaf.js"
+  ]
+}
