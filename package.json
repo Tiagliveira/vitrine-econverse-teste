@@ -1,6 +1,5 @@
 {
   "name": "econverse-vitrine",
-  "homepage": "https://tiagliveira.github.io/vitrine-econverse-teste",
    "proxy": "https://app.econverse.com.br",
   "version": "1.0.0",
   "main": "index.js",
